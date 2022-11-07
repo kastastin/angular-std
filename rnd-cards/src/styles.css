@@ -1,9 +1,2 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bulma/css/bulma.css";
-
-app-root {
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
