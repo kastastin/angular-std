@@ -7,5 +7,15 @@ import { faker } from "@faker-js/faker";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  test = faker.git.commitMessage();
+  randomText = faker.git.commitMessage();
+  userInput = '';
+
+  onBtnReload() {
+    document.location.reload();
+  }
+
+  onInput(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.userInput = target.value;
+  }
 }
