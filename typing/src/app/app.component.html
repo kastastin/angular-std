@@ -13,7 +13,9 @@
       <div class="box has-text-centered" *ngIf="userInput === randomText">
         <h2 class="title">Success!</h2>
       </div>
+      <audio id="sound" src="http://www.w3schools.com/html/horse.ogg"></audio>
       <button class="button" (click)="onBtnReload()">Reload</button>
+      <button class="button" (click)="stopSounds()" *ngIf="isSounds">Sounds Off</button>
     </div>
   </div>
 </div>
