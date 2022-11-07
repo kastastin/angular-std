@@ -10,12 +10,20 @@ export class AppComponent {
   randomText = faker.git.commitMessage();
   userInput = '';
 
-  onBtnReload() {
-    document.location.reload();
-  }
-
   onInput(event: Event) {
     const target = event.target as HTMLInputElement;
     this.userInput = target.value;
+  }
+
+  compare(rndSign: string, userSign: string) {
+    if (!userSign) {
+      return 'pending';
+    }
+
+    return rndSign === userSign ? 'correct' : 'incorrect';
+  }
+
+  onBtnReload() {
+    document.location.reload();
   }
 }

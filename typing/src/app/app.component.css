@@ -8,3 +8,17 @@
 p, input {
     font-weight: 500;
 }
+
+.pending {
+    color: gray;
+}
+
+.correct {
+    color: green;
+    font-weight: 700;
+}
+ 
+.incorrect {
+    color: red;
+    font-weight: 900;
+}
