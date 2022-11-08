@@ -21,6 +21,12 @@
 </nav>
 
 <div>
-  <h4>{{ images[currentPage].title }}</h4>
+  <h4 appClass [backgroundColor]="'red'">{{ images[currentPage].title }}</h4>
   <img [src]="images[currentPage].url" />
 </div>
+
+<!-- <div [ngSwitch]="currentPage">
+  <div *ngSwitchCase="0">Curr: 0</div>
+  <div *ngSwitchCase="1">Curr: 1</div>
+  <div *ngSwitchDefault>*ngSwitchDefault</div>
+</div> -->
