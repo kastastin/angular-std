@@ -4,7 +4,7 @@
       <a class="page-link">Prev</a>
     </li>
 
-    <ng-container *ngFor="let image of images; let i = index;">
+    <ng-container *appTimes="images.length; let i = index;">
       <li
         class="page-item"
         [appClass]="{ active: i === currentPage }"
@@ -25,8 +25,6 @@
   <img [src]="images[currentPage].url" />
 </div>
 
-<!-- <div [ngSwitch]="currentPage">
-  <div *ngSwitchCase="0">Curr: 0</div>
-  <div *ngSwitchCase="1">Curr: 1</div>
-  <div *ngSwitchDefault>*ngSwitchDefault</div>
-</div> -->
+<ul *appTimes="5">
+  <li>Test Structural Directive</li>
+</ul>
